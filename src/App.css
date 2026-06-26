@@ -288,7 +288,7 @@ select, input, textarea { font-family: inherit }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 999;
-  padding: 18px 0;
+  padding: 10px 0;
   transition: all .3s ease;
 }
 .nav-s {
@@ -296,7 +296,7 @@ select, input, textarea { font-family: inherit }
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow: 0 1px 0 rgba(0,0,0,.07);
-  padding: 12px 0;
+  padding: 6px 0;
 }
 .nav-c {
   max-width: 1220px;
@@ -309,21 +309,19 @@ select, input, textarea { font-family: inherit }
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-family: 'Sora', sans-serif;
-  font-weight: 700;
-  font-size: 17px;
-  color: var(--text);
   flex-shrink: 0;
+  line-height: 0;
 }
-.brand-icon {
-  width: 34px; height: 34px;
-  background: rgba(99,102,241,.1);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(99,102,241,.2);
+.brand-logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  transition: transform .2s ease, opacity .2s ease;
+}
+.brand:hover .brand-logo {
+  transform: scale(1.03);
+  opacity: 0.88;
 }
 .nav-links {
   display: flex;
@@ -883,6 +881,14 @@ select, input, textarea { font-family: inherit }
   z-index: 0;
   pointer-events: none;
 }
+.services-beams-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.35;
+}
 .grid-scan-bg {
   position: absolute;
   inset: 0;
@@ -1363,10 +1369,113 @@ select, input, textarea { font-family: inherit }
 .cform select { cursor: pointer; appearance: none }
 .cform textarea { resize: vertical; min-height: 100px }
 .btn-submit { display: block; width: 100%; justify-content: center; border-radius: var(--r) }
+
+/* ── Form field group (label + control) ── */
+.form-field-group { display: flex; flex-direction: column; gap: 8px }
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+
+/* ── Plan radio pills ─────────────────── */
+.plan-radio-group { display: flex; gap: 10px; flex-wrap: wrap }
+.plan-radio {
+  display: flex; align-items: center; gap: 7px;
+  padding: 8px 18px; border-radius: 100px;
+  border: 1.5px solid var(--gray2); background: var(--white);
+  font-size: 14px; font-weight: 500; color: var(--muted);
+  cursor: pointer; transition: border-color .2s, background .2s, color .2s, box-shadow .2s;
+  user-select: none;
+}
+.plan-radio input[type="radio"] { display: none }
+.plan-radio:hover { border-color: var(--accent); color: var(--accent); background: rgba(99,102,241,.04) }
+.plan-radio-active {
+  border-color: var(--accent); background: rgba(99,102,241,.08);
+  color: var(--accent); font-weight: 600; box-shadow: 0 0 0 3px rgba(99,102,241,.1);
+}
+
+/* ── Feature checkboxes ───────────────── */
+.feature-check-group { display: flex; gap: 10px; flex-wrap: wrap }
+.feature-check {
+  display: flex; align-items: center; gap: 7px;
+  padding: 7px 14px; border-radius: var(--r);
+  border: 1.5px solid var(--gray2); background: var(--white);
+  font-size: 13px; font-weight: 500; color: var(--muted);
+  cursor: pointer; transition: border-color .2s, background .2s, color .2s;
+  user-select: none;
+}
+.feature-check input[type="checkbox"] { display: none }
+.feature-check:hover { border-color: var(--accent); color: var(--accent); background: rgba(99,102,241,.04) }
+.feature-check-active {
+  border-color: var(--accent); background: rgba(99,102,241,.08);
+  color: var(--accent); font-weight: 600;
+}
+.feature-check-active::before { content: '✓ '; font-size: 11px }
+
+/* ── Date input ───────────────────────── */
+.date-input {
+  width: 100%; padding: 12px 16px;
+  background: var(--gray1); border: var(--border); border-radius: var(--r);
+  font-size: 14px; color: var(--text);
+  transition: border-color .2s, box-shadow .2s; outline: none; cursor: pointer;
+}
+.date-input:focus {
+  border-color: var(--accent); box-shadow: 0 0 0 3px rgba(99,102,241,.1); background: var(--white);
+}
+
 .form-ok { text-align: center; padding: 40px 0 }
 .ok-icon { font-size: 56px; margin-bottom: 16px }
 .form-ok h3 { font-family: 'Sora', sans-serif; font-size: 24px; font-weight: 700; color: var(--text); margin-bottom: 10px }
 .form-ok p  { font-size: 14px; color: var(--muted) }
+
+/* Form error message */
+.form-error {
+  background: rgba(244, 63, 94, 0.08);
+  border: 1px solid rgba(244, 63, 94, 0.25);
+  color: var(--danger);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 14px;
+  border-radius: var(--r);
+  line-height: 1.5;
+}
+
+/* Disabled inputs during loading */
+.cform input:disabled,
+.cform select:disabled,
+.cform textarea:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  background: var(--gray2);
+}
+
+/* Loading button state */
+.btn-loading {
+  opacity: 0.8;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.btn-spinner-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+.btn-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+@keyframes spin {
+  to { transform: rotate(360deg) }
+}
 
 /* ══════════════════════════════════════════════════════════
    FOOTER
@@ -1383,7 +1492,15 @@ select, input, textarea { font-family: inherit }
   padding-bottom: 56px;
 }
 .foot-brand .brand { color: #fff; margin-bottom: 16px }
-.foot-brand .brand-icon { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.15) }
+.foot-brand-logo { margin-bottom: 16px; display: inline-block }
+.foot-logo-img {
+  height: 52px;
+  width: auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 6px 10px;
+  object-fit: contain;
+}
 .foot-brand p { font-size: 14px; line-height: 1.75; max-width: 300px }
 .foot-socials { display: flex; gap: 10px; margin-top: 20px }
 .fsoc {
@@ -1434,9 +1551,15 @@ select, input, textarea { font-family: inherit }
   .foot-grid { grid-template-columns: 1fr 1fr }
 }
 
+@media (max-width: 768px) {
+  .svc-grid { grid-template-columns: 1fr }
+}
+
 @media (max-width: 640px) {
   .section { padding: 72px 0 }
-  .nav-links { display: none; position: fixed; top: 64px; left: 0; right: 0; background: rgba(255,255,255,.98); backdrop-filter: blur(16px); flex-direction: column; padding: 20px; gap: 4px; box-shadow: var(--sh-lg); border-bottom: var(--border) }
+  .nav { padding: 6px 0 }
+  .brand-logo { height: 56px }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(255,255,255,.98); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); flex-direction: column; padding: 20px; gap: 4px; box-shadow: var(--sh-lg); border-bottom: var(--border) }
   .nl-open { display: flex !important }
   .burger { display: flex }
   .proc-grid { grid-template-columns: 1fr 1fr }
@@ -1447,6 +1570,14 @@ select, input, textarea { font-family: inherit }
   .form-row { grid-template-columns: 1fr }
   .hero-stats { gap: 20px }
   .hero-h1 { font-size: 36px }
+}
+
+@media (max-width: 480px) {
+  .section { padding: 56px 0 }
+  .proc-grid { grid-template-columns: 1fr }
+  .cred-stats { grid-template-columns: 1fr }
+  .hero-h1 { font-size: 28px }
+  .st { font-size: 26px }
 }
 
 /* ── ScrollReveal (GSAP) ──────────────────────────────────── */

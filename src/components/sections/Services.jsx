@@ -1,5 +1,6 @@
 import ScrollReveal from '../../ScrollReveal'
 import Aurora from '../shared/Aurora'
+import Beams from '../shared/Beams'
 import SR from '../shared/SR'
 import Card from '../shared/Card'
 import Badge from '../shared/Badge'
@@ -18,6 +19,19 @@ const Services = () => {
   return (
     <section id="services" className="section sec-gray">
       <Aurora />
+      <div className="services-beams-bg">
+        <Beams
+          beamWidth={3}
+          beamHeight={30}
+          beamNumber={20}
+          lightColor="#ffffff"
+          speed={2}
+          noiseIntensity={1.75}
+          scale={0.2}
+          rotation={30}
+          diffuseColor="#ffffff"
+        />
+      </div>
       <div className="container">
         <SR className="sh">
           <Badge text="Our Services" />

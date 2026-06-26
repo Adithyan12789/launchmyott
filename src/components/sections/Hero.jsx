@@ -1,4 +1,4 @@
-import Ferrofluid from '../shared/Ferrofluid'
+import ColorBends from '../shared/ColorBends'
 import SR from '../shared/SR'
 import Mag from '../shared/Mag'
 import Cycle from '../shared/Cycle'
@@ -6,23 +6,23 @@ import Counter from '../shared/Counter'
 
 const Hero = () => (
   <section id="hero" className="hero">
-    {/* ReactBits Antigravity — full-hero 3D particle background */}
-    <div className="hero-antigravity-bg">
-      <Ferrofluid
-        colors={['#6366f1', '#0ea5e9', '#8b5cf6']}
-        speed={0.5}
-        scale={1.6}
-        turbulence={1}
-        fluidity={0.1}
-        rimWidth={0.2}
-        sharpness={2.5}
-        shimmer={1.5}
-        glow={2}
-        flowDirection="down"
-        opacity={1}
-        mouseInteraction
-        mouseStrength={1}
-        mouseRadius={0.35}
+    {/* ReactBits ColorBends — full-hero animated background */}
+    <div className="hero-antigravity-bg" style={{ opacity: 0.8 }}>
+      <ColorBends
+        colors={["#6366f1", "#0ea5e9", "#8b5cf6", "#38bdf8", "#a855f7"]}
+        rotation={90}
+        speed={0.18}
+        scale={1.0}
+        frequency={1.1}
+        warpStrength={1.2}
+        mouseInfluence={0.8}
+        noise={0.06}
+        parallax={0.5}
+        iterations={3}
+        intensity={2.2}
+        bandWidth={6}
+        transparent
+        autoRotate={0.8}
       />
     </div>
     <div className="hero-bg-mesh" />

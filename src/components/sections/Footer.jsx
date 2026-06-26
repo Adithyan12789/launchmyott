@@ -1,14 +1,13 @@
+import logoImg from '../../assets/launchmyott-logo.png'
+
 const Footer = () => (
   <footer className="footer">
     <div className="container">
       <div className="foot-grid">
         <div className="foot-brand">
-          <div className="brand">
-            <div className="brand-icon">
-              <svg width="18" height="18" viewBox="0 0 20 20"><polygon points="4,2 16,10 4,18" fill="url(#fg)" /><defs><linearGradient id="fg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#6366f1" /><stop offset="100%" stopColor="#0ea5e9" /></linearGradient></defs></svg>
-            </div>
-            <span>Launch My OTT</span>
-          </div>
+          <a href="#hero" className="brand foot-brand-logo">
+            <img src={logoImg} alt="LaunchMyOTT" className="brand-logo foot-logo-img" />
+          </a>
           <p>End-to-end OTT platform development for content creators, broadcasters, and media companies worldwide. Building streaming empires since 2016.</p>
           <div className="foot-socials">
             <a href="#" className="fsoc">𝕏</a>
