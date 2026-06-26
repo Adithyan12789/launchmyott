@@ -1,10 +1,28 @@
 import ScrollReveal from '../../ScrollReveal'
 import SR from '../shared/SR'
 import Card from '../shared/Card'
+import LineWaves from '../shared/LineWaves'
 
 const Guarantee = () => (
-  <section className="section sec-gray" style={{ position: 'relative', overflow: 'hidden' }}>
-    <div className="container">
+  <section className="section sec-gray" style={{ position: 'relative', overflow: 'hidden', minHeight: '500px' }}>
+    <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, opacity: 0.6 }}>
+      <LineWaves
+        speed={0.3}
+        innerLineCount={32}
+        outerLineCount={36}
+        warpIntensity={1}
+        rotation={-45}
+        edgeFadeWidth={0}
+        colorCycleSpeed={1}
+        brightness={1.2}
+        color1="#6366f1"
+        color2="#0ea5e9"
+        color3="#8b5cf6"
+        enableMouseInteraction
+        mouseInfluence={2}
+      />
+    </div>
+    <div className="container" style={{ position: 'relative', zIndex: 1 }}>
       <SR>
         <Card className="g-card">
           <div className="g-left">
