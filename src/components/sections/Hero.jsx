@@ -1,4 +1,4 @@
-import Antigravity from '../../Antigravity'
+import Ferrofluid from '../shared/Ferrofluid'
 import SR from '../shared/SR'
 import Mag from '../shared/Mag'
 import Cycle from '../shared/Cycle'
@@ -8,22 +8,21 @@ const Hero = () => (
   <section id="hero" className="hero">
     {/* ReactBits Antigravity — full-hero 3D particle background */}
     <div className="hero-antigravity-bg">
-      <Antigravity
-        count={300}
-        magnetRadius={6}
-        ringRadius={7}
-        waveSpeed={0.4}
-        waveAmplitude={1}
-        particleSize={1.5}
-        lerpSpeed={0.09}
-        color="#6366f1"
-        autoAnimate
-        particleVariance={1}
-        rotationSpeed={0}
-        depthFactor={1}
-        pulseSpeed={3}
-        particleShape="capsule"
-        fieldStrength={10}
+      <Ferrofluid
+        colors={['#6366f1', '#0ea5e9', '#8b5cf6']}
+        speed={0.5}
+        scale={1.6}
+        turbulence={1}
+        fluidity={0.1}
+        rimWidth={0.2}
+        sharpness={2.5}
+        shimmer={1.5}
+        glow={2}
+        flowDirection="down"
+        opacity={1}
+        mouseInteraction
+        mouseStrength={1}
+        mouseRadius={0.35}
       />
     </div>
     <div className="hero-bg-mesh" />

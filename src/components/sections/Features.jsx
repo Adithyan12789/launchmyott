@@ -1,5 +1,6 @@
 import ScrollReveal from '../../ScrollReveal'
 import Waves from '../shared/Waves'
+import Threads from '../shared/Threads'
 import SR from '../shared/SR'
 import Card from '../shared/Card'
 import Badge from '../shared/Badge'
@@ -16,6 +17,14 @@ const Features = () => {
   return (
     <section id="features" className="section">
       <Waves />
+      <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 0, opacity: 0.35 }}>
+        <Threads
+          amplitude={1}
+          distance={0}
+          enableMouseInteraction
+          color={[0.388, 0.4, 0.945]}
+        />
+      </div>
       <div className="container">
         <SR className="sh">
           <Badge text="Platform Features" />
