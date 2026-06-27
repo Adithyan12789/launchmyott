@@ -18,7 +18,18 @@ const Starfield = () => {
         speed: Math.random() * 0.015 + 0.004
       }))
     }
+    let isVisible = true;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisible = entry.isIntersecting;
+      },
+      { threshold: 0 }
+    );
+    observer.observe(c);
+
     const draw = () => {
+      id = requestAnimationFrame(draw)
+      if (!isVisible || document.hidden) return;
       ctx.clearRect(0, 0, w, h)
       stars.forEach(s => {
         s.alpha += s.speed
@@ -28,11 +39,10 @@ const Starfield = () => {
         ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2)
         ctx.fill()
       })
-      id = requestAnimationFrame(draw)
     }
     resize(); draw()
     window.addEventListener('resize', resize)
-    return () => { cancelAnimationFrame(id); window.removeEventListener('resize', resize) }
+    return () => { cancelAnimationFrame(id); observer.disconnect(); window.removeEventListener('resize', resize) }
   }, [])
   return <canvas ref={canvasRef} className="pg-canvas" />
 }

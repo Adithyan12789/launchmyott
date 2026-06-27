@@ -3,6 +3,7 @@ import SR from '../shared/SR'
 import Mag from '../shared/Mag'
 import Cycle from '../shared/Cycle'
 import Counter from '../shared/Counter'
+import Shuffle from '../shared/Shuffle'
 
 const Hero = () => (
   <section id="hero" className="hero">
@@ -35,9 +36,39 @@ const Hero = () => (
         </SR>
         <SR delay={80}>
           <h1 className="hero-h1">
-            Launch Your Own<br />
+            <Shuffle
+              text="Launch Your Own"
+              tag="span"
+              shuffleDirection="right"
+              duration={0.4}
+              animationMode="evenodd"
+              shuffleTimes={1}
+              ease="power3.out"
+              stagger={0.03}
+              threshold={0.1}
+              triggerOnce={true}
+              triggerOnHover={true}
+              respectReducedMotion={true}
+              loop={false}
+              style={{ display: 'block', textAlign: 'left', fontFamily: 'inherit', fontSize: 'inherit', fontWeight: 'inherit', lineHeight: 'inherit', color: 'inherit', letterSpacing: 'inherit' }}
+            />
             <Cycle words={['OTT Platform', 'Streaming Empire', 'Content Hub', 'Media Brand']} /><br />
-            in Minutes, Not Years
+            <Shuffle
+              text="in Minutes, Not Years"
+              tag="span"
+              shuffleDirection="right"
+              duration={0.4}
+              animationMode="evenodd"
+              shuffleTimes={1}
+              ease="power3.out"
+              stagger={0.03}
+              threshold={0.1}
+              triggerOnce={true}
+              triggerOnHover={true}
+              respectReducedMotion={true}
+              loop={false}
+              style={{ display: 'block', textAlign: 'left', fontFamily: 'inherit', fontSize: 'inherit', fontWeight: 'inherit', lineHeight: 'inherit', color: 'inherit', letterSpacing: 'inherit' }}
+            />
           </h1>
         </SR>
         <SR delay={160}>

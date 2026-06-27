@@ -203,7 +203,19 @@ export default function ColorBends({
       window.addEventListener('resize', handleResize);
     }
 
+    let isVisible = true;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisible = entry.isIntersecting;
+      },
+      { threshold: 0 }
+    );
+    observer.observe(container);
+
     const loop = () => {
+      rafRef.current = requestAnimationFrame(loop);
+      if (!isVisible || document.hidden) return;
+
       const dt = clock.getDelta();
       const elapsed = clock.elapsedTime;
       material.uniforms.uTime.value = elapsed;
@@ -218,7 +230,6 @@ export default function ColorBends({
       material.uniforms.uPointer.value.copy(cur);
 
       renderer.render(scene, camera);
-      rafRef.current = requestAnimationFrame(loop);
     };
     rafRef.current = requestAnimationFrame(loop);
 
@@ -226,6 +237,7 @@ export default function ColorBends({
       if (rafRef.current !== null) cancelAnimationFrame(rafRef.current);
       if (resizeObserverRef.current) resizeObserverRef.current.disconnect();
       else window.removeEventListener('resize', handleResize);
+      observer.disconnect();
       geometry.dispose();
       material.dispose();
       renderer.dispose();

@@ -11,7 +11,18 @@ const Waves = () => {
       w = c.width = c.offsetWidth
       h = c.height = c.offsetHeight
     }
+    let isVisible = true;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisible = entry.isIntersecting;
+      },
+      { threshold: 0 }
+    );
+    observer.observe(c);
+
     const draw = () => {
+      id = requestAnimationFrame(draw)
+      if (!isVisible || document.hidden) return;
       ctx.clearRect(0, 0, w, h)
       ctx.lineWidth = 1
       t += 0.003
@@ -24,11 +35,10 @@ const Waves = () => {
         }
         ctx.stroke()
       }
-      id = requestAnimationFrame(draw)
     }
     resize(); draw()
     window.addEventListener('resize', resize)
-    return () => { cancelAnimationFrame(id); window.removeEventListener('resize', resize) }
+    return () => { cancelAnimationFrame(id); observer.disconnect(); window.removeEventListener('resize', resize) }
   }, [])
   return <canvas ref={canvasRef} className="pg-canvas" />
 }

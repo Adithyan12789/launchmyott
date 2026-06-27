@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unknown-property */
-import { forwardRef, useImperativeHandle, useEffect, useRef, useMemo } from 'react';
+import { forwardRef, useImperativeHandle, useEffect, useRef, useMemo, useState } from 'react';
 import * as THREE from 'three';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { PerspectiveCamera } from '@react-three/drei';
@@ -46,8 +46,8 @@ function extendMaterial(BaseMaterial, cfg) {
   return mat;
 }
 
-const CanvasWrapper = ({ children }) => (
-  <Canvas dpr={[1, 2]} frameloop="always" className="w-full h-full relative" style={{ background: 'transparent' }}>
+const CanvasWrapper = ({ children, frameloop }) => (
+  <Canvas dpr={[1, 2]} frameloop={frameloop} className="w-full h-full relative" style={{ background: 'transparent' }}>
     {children}
   </Canvas>
 );
@@ -148,6 +148,20 @@ const Beams = ({
   rotation = 0,
   diffuseColor = '#000000'
 }) => {
+  const containerRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0 }
+    );
+    if (containerRef.current) observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   const meshRef = useRef(null);
   const beamMaterial = useMemo(
     () =>
@@ -207,14 +221,16 @@ const Beams = ({
   );
 
   return (
-    <CanvasWrapper>
-      <group rotation={[0, 0, degToRad(rotation)]}>
-        <PlaneNoise ref={meshRef} material={beamMaterial} count={beamNumber} width={beamWidth} height={beamHeight} />
-        <DirLight color={lightColor} position={[0, 3, 10]} />
-      </group>
-      <ambientLight intensity={1} />
-      <PerspectiveCamera makeDefault position={[0, 0, 20]} fov={30} />
-    </CanvasWrapper>
+    <div ref={containerRef} style={{ width: '100%', height: '100%', position: 'absolute', inset: 0 }}>
+      <CanvasWrapper frameloop={isVisible && !document.hidden ? "always" : "never"}>
+        <group rotation={[0, 0, degToRad(rotation)]}>
+          <PlaneNoise ref={meshRef} material={beamMaterial} count={beamNumber} width={beamWidth} height={beamHeight} />
+          <DirLight color={lightColor} position={[0, 3, 10]} />
+        </group>
+        <ambientLight intensity={1} />
+        <PerspectiveCamera makeDefault position={[0, 0, 20]} fov={30} />
+      </CanvasWrapper>
+    </div>
   );
 };
 

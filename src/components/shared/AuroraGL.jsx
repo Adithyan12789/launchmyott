@@ -171,9 +171,20 @@ export default function AuroraGL({
     const mesh = new Mesh(gl, { geometry, program });
     ctn.appendChild(gl.canvas);
 
+    let isVisible = true;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisible = entry.isIntersecting;
+      },
+      { threshold: 0 }
+    );
+    observer.observe(ctn);
+
     let animateId = 0;
     const update = t => {
       animateId = requestAnimationFrame(update);
+      if (!isVisible || document.hidden) return;
+
       const { speed: spd = 1.0, amplitude: amp = 1.0, blend: bl = 0.5, colorStops: stops } = propsRef.current;
       program.uniforms.uTime.value = t * 0.001 * spd;
       program.uniforms.uAmplitude.value = amp;
@@ -190,6 +201,7 @@ export default function AuroraGL({
 
     return () => {
       cancelAnimationFrame(animateId);
+      observer.disconnect();
       window.removeEventListener('resize', resize);
       if (ctn && gl.canvas.parentNode === ctn) {
         ctn.removeChild(gl.canvas);
