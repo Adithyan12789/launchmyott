@@ -6,23 +6,23 @@ import Badge from '../shared/Badge'
 
 const Credibility = () => {
   const stats = [
-    { v: '50+', l: 'OTT Platforms Launched Globally' },
+    { v: '150+', l: 'OTT Platforms Launched Globally' },
     { v: '45M+', l: 'End Users Streaming Daily' },
-    { v: '99.99%', l: 'Average Platform Uptime' },
+    { v: '99.99%', l: 'Uptime SLA Guarantee' },
     { v: '8+', l: 'Years of OTT Expertise' },
   ]
   const certs = [
-    { icon: '🏆', t: 'AWS Advanced Partner', d: 'Certified cloud infrastructure expertise' },
-    { icon: '🛡️', t: 'ISO 27001 Certified', d: 'Enterprise-grade security standards' },
-    { icon: '🌍', t: 'GDPR & CCPA Compliant', d: 'Full regulatory compliance worldwide' },
+    { icon: '🏆', t: 'AWS Advanced Technology Partner', d: 'Enterprise-grade scalable cloud architecture' },
+    { icon: '🛡️', t: 'ISO 27001 Security Certified', d: 'Industry-leading protection for user & billing data' },
+    { icon: '🌍', t: 'GDPR & CCPA Compliance Ready', d: 'Seamless localized data operations worldwide' },
   ]
   return (
     <section id="credibility" className="section">
       <FlickeringGrid />
       <div className="container">
         <SR className="sh">
-          <Badge text="Our Track Record" />
-          <h2 className="st">Numbers That Prove<br />Our Expertise</h2>
+          <Badge text="Proven Authority" />
+          <h2 className="st">Numbers That Power Your<br />Streaming Success</h2>
         </SR>
         <div className="cred-stats">
           {stats.map((s, i) => (

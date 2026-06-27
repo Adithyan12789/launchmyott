@@ -10,15 +10,15 @@ const Urgency = () => (
     <div className="container">
       <SR>
         <div className="urgency-inner">
-          <Badge text="Limited Availability" />
-          <h2>We Only Take On <span className="urg-hl">8 New Projects</span> Per Month</h2>
-          <p>To maintain the quality our clients expect, we strictly limit new project intake. Our current queue has <strong>3 spots remaining for this month</strong>. Once filled, the next available start date moves to the following month.</p>
+          <Badge text="Limited Capacity" />
+          <h2>Strict Limit of <span className="urg-hl">8 New OTT Launches</span> Per Month</h2>
+          <p>To maintain the high performance of our OTT platform development, we cap monthly project kickoffs. Our queue has only <strong>3 launch slots remaining</strong> for this cycle.</p>
           <div className="urg-badges">
-            <div className="ub">🔥 3 of 8 Spots Remaining This Month</div>
-            <div className="ub">🎁 Free Content Migration ($2,500 value) — This Month Only</div>
-            <div className="ub">⚡ Book This Week → Get Priority 4-Week Launch Track</div>
+            <div className="ub">🔥 Only 3 of 8 Launch Slots Remaining This Month</div>
+            <div className="ub">🎁 Free Content Migration & CMS Ingestion ($2,500 Value)</div>
+            <div className="ub">⚡ Start This Week → Get Guaranteed 4-Week Launch Track</div>
           </div>
-          <Mag href="#contact" className="btn-pri btn-lg">🚀 Claim Your Spot Now</Mag>
+          <Mag href="#contact" className="btn-pri btn-lg">🚀 Claim Your Consultation Spot Now</Mag>
         </div>
       </SR>
     </div>

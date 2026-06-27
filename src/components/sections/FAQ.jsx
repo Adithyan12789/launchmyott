@@ -7,23 +7,23 @@ import Badge from '../shared/Badge'
 const FAQ = () => {
   const [open, so] = useState(null)
   const faqs = [
-    { q: 'How long does it take to launch my OTT platform?', a: 'Our Starter plan typically launches in 4–6 weeks. Growth plans take 6–10 weeks. Enterprise custom builds range from 10–16 weeks depending on complexity. These timelines include design, development, testing, and app store submissions. We\'ve launched platforms in as little as 3 weeks for clients with clear requirements and ready content.' },
-    { q: 'Do I own the platform, or is it rented?', a: 'You own everything. The platform is built and deployed under your brand, your domain, your app store accounts. You own the codebase, the design, the subscriber data — all of it. We\'re not a SaaS platform where you rent access. No lock-in, no hostage data, no strings attached.' },
-    { q: 'What ongoing costs should I expect after launch?', a: 'After the one-time development fee: Cloud hosting ($99–$999/mo based on traffic), CDN bandwidth (usage-based), optional maintenance packages ($199–$999/mo), and app store fees ($99/yr Apple, $25 one-time Google). Most clients spend $300–$800/month total on infrastructure until they hit 50,000+ subscribers.' },
-    { q: 'Can I migrate my existing content library?', a: 'Absolutely. We handle complete content migration from any existing platform — YouTube, Vimeo, Amazon S3, other OTT platforms, or physical media. We migrate your videos, metadata, thumbnails, subtitles, and organize everything in your new CMS. Our largest migration involved 25,000+ titles with metadata in 8 languages.' },
-    { q: 'What if I need features not in the standard plans?', a: 'That\'s exactly what our Enterprise plan is designed for. We build custom features all the time — from interactive choose-your-own-adventure content to real-time sports statistics overlays. Custom features are priced separately and typically range from $2,000–$20,000 depending on complexity.' },
-    { q: 'How do you handle content piracy and security?', a: 'Security is non-negotiable. Every platform includes Multi-DRM encryption (Widevine for Android/Chrome, FairPlay for Apple, PlayReady for Windows), AES-128 content encryption, secure token authentication, geo-blocking capabilities, and IP-based access restrictions.' },
-    { q: 'Do you provide support after launch?', a: 'Yes — every plan includes 90 days of free post-launch support. After that, we offer monthly support packages: Essential ($199/mo), Professional ($499/mo), Premium ($999/mo — dedicated account manager, 24/7 phone support). 92% of our clients choose ongoing support.' },
-    { q: 'Can my platform scale to millions of users?', a: 'It\'s literally what we\'re built for. Our architecture uses auto-scaling cloud infrastructure (AWS/GCP) with global CDN across 200+ edge locations. Our largest client currently serves 8 million monthly active users across 32 countries.' },
+    { q: 'How long does it take to build and launch my white label OTT platform?', a: 'Our standard white label OTT platform launches in 4–6 weeks, including custom OTT app development, platform testing, and app store submissions. Larger streaming services take 6–10 weeks, while custom enterprise integrations range from 10–16 weeks. We work efficiently to deploy your video streaming platform quickly without compromising on quality.' },
+    { q: 'Do I own the custom video streaming platform, or is it a rented software?', a: 'You own the entire platform. Unlike basic rented software solutions, we build and deploy the OTT CMS and apps under your brand, domain, and publisher accounts. You own 100% of the customer database, video assets, subscription revenue, and codebase—with zero vendor lock-in.' },
+    { q: 'What ongoing costs should I expect for video hosting and CDN?', a: 'Your primary ongoing cost is hosting. After your one-time build fee, you only pay for AWS/GCP cloud hosting (starting around $99/mo), usage-based CDN bandwidth, and standard app store fees ($99/yr Apple, $25 one-time Google). This is highly cost-effective and scales directly with your viewership growth.' },
+    { q: 'Can you migrate my existing content into the new OTT CMS?', a: 'Yes, migration is seamless. Our team handles complete migration from legacy setups like Vimeo OTT, YouTube, Uscreen, or Amazon S3. We transfer your video files, catalog structure, metadata tags, and customer data directly into your new white label OTT CMS. We have migrated directories of up to 25,000+ files.' },
+    { q: 'Can you build custom features similar to a Netflix clone?', a: 'Absolutely. We can create advanced, custom functionality—including interactive video features, offline viewing capabilities, profiles, personalized recommendations, live chat overlays, and custom monetization strategies. Our developers specialize in tailoring the platform exactly to your needs.' },
+    { q: 'How does your OTT solution prevent piracy and secure content?', a: 'Security is built into our core OTT software. We secure your streams with studio-grade Multi-DRM (Google Widevine, Apple FairPlay, Microsoft PlayReady), AES-128 token protection, geo-blocking filters, and anti-screen-recording shields to fully protect your video monetization rights.' },
+    { q: 'Do you provide ongoing technical support after launch?', a: 'Yes, every project includes 90 days of dedicated post-launch support. After that, we offer affordable maintenance packages starting at $199/mo. Our support covers software updates, CDN performance monitoring, OS compatibility checks, and bug fixes so your streaming apps always run smoothly.' },
+    { q: 'Can this video hosting platform scale to millions of concurrent streams?', a: 'Yes, scalability is guaranteed. The architecture is engineered on auto-scaling cloud clusters (AWS/GCP) and integrated with global CDNs. Whether you have 1,000 or millions of concurrent active users streaming in 4K, the platform scales dynamically to prevent buffering.' },
   ]
   return (
     <section id="faq" className="section">
       <Waves />
       <div className="container">
         <SR className="sh">
-          <Badge text="FAQ" />
-          <h2 className="st">Every Question You Have,<br />Answered Honestly.</h2>
-          <ScrollReveal baseOpacity={0.1} enableBlur blurStrength={4} baseRotation={2} textClassName="ss sr-text">Thoroughly transparent answers to help you make a confident decision.</ScrollReveal>
+          <Badge text="OTT FAQ" />
+          <h2 className="st">Frequently Asked Questions<br />About Our OTT Solution</h2>
+          <ScrollReveal baseOpacity={0.1} enableBlur blurStrength={4} baseRotation={2} textClassName="ss sr-text">Get transparent answers about custom OTT app development, licensing, pricing, and platform scalability.</ScrollReveal>
         </SR>
         <div className="faq-list">
           {faqs.map((f, i) => (

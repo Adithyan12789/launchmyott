@@ -30,10 +30,10 @@ const Guarantee = () => (
             <div className="g-label">30-DAY<br />MONEY-BACK<br />GUARANTEE</div>
           </div>
           <div className="g-right">
-            <h2>Our Iron-Clad, Zero-Risk Guarantee</h2>
-            <ScrollReveal baseOpacity={0.1} enableBlur blurStrength={3} baseRotation={1} textClassName="sr-text">We're so confident in the quality of our OTT platform development that we offer a full 30-day money-back guarantee. If within 30 days of project kickoff you're not completely satisfied with our progress, deliverables, and communication — we'll refund 100% of your payment. No questions asked. No hoops to jump through. No fine print.</ScrollReveal>
-            <ScrollReveal baseOpacity={0.1} enableBlur blurStrength={3} baseRotation={1} textClassName="sr-text">We've offered this guarantee on every single project since 2016. Want to know how many times we've been asked for a refund? Three times out of 150+ projects. And in all three cases, we processed the refund within 48 hours. That's how much we stand behind our work.</ScrollReveal>
-            <ScrollReveal baseOpacity={0.1} enableBlur blurStrength={3} baseRotation={1} textClassName="sr-text">You have literally nothing to lose and a world-class streaming platform to gain.</ScrollReveal>
+            <h2>Our Zero-Risk, White Label OTT Development Guarantee</h2>
+            <ScrollReveal baseOpacity={0.1} enableBlur blurStrength={3} baseRotation={1} textClassName="sr-text">We are confident in our custom OTT app development and global hosting reliability. We support every kickoff with an ironclad 30-day money-back guarantee. If you are not satisfied with our milestone progress, design drafts, or codebase updates, we will issue a 100% refund. No questions asked.</ScrollReveal>
+            <ScrollReveal baseOpacity={0.1} enableBlur blurStrength={3} baseRotation={1} textClassName="sr-text">This policy has backed all our custom white label OTT platform launches since 2016. Out of 150+ platform rollouts, only three clients have ever requested a refund—and each was processed in under 48 hours. We value developer transparency and absolute buyer trust.</ScrollReveal>
+            <ScrollReveal baseOpacity={0.1} enableBlur blurStrength={3} baseRotation={1} textClassName="sr-text">You gain a premium video streaming platform with zero setup risk.</ScrollReveal>
           </div>
         </Card>
       </SR>

@@ -135,19 +135,19 @@ Submitted via LaunchMyOTT website
       <ParticleGrid />
       <div className="container">
         <SR className="sh">
-          <Badge text="Get In Touch" />
-          <h2 className="st">Let's Build Your<br />Streaming Empire</h2>
+          <Badge text="Contact Us" />
+          <h2 className="st">Let's Build Your<br />Video Streaming Platform</h2>
           <ScrollReveal baseOpacity={0.1} enableBlur blurStrength={4} baseRotation={2} textClassName="ss sr-text">
-            Fill out the form below and our OTT strategy team will get back to you within 4 business hours with a customized platform proposal — completely free, no obligation.
+            Submit your details below and our OTT strategy team will deliver a customized proposal and platform rollout plan in under 4 business hours—entirely free.
           </ScrollReveal>
         </SR>
 
         <div className="con-layout">
           <SR className="con-info">
             {[
-              { icon: '📧', t: 'Email Us', i: 'Hello@launchmyott.com', s: 'We respond within 4 hours during business days' },
-              { icon: '📞', t: 'Call Us', i: '+91 9447220618', s: 'Mon–Fri, 9am–6pm IST' },
-              { icon: '💬', t: 'Live Chat', i: 'Available on our website', s: '' },
+              { icon: '📧', t: 'Email Us', i: 'Hello@launchmyott.com', s: 'We respond within 4 business hours' },
+              { icon: '📞', t: 'Call Us', i: '+91 9447220618', s: 'Mon–Fri, 9:30am–6:30pm IST' },
+              { icon: '💬', t: 'Live Chat', i: 'Available via website & WhatsApp', s: '' },
               { icon: '🌍', t: 'Global Office', i: '2nd & 3rd Floor, H No. 8-2-686/K/6, Gokul Kimtee Towers', s: 'Banjara Hills Road No. 12, Hyderabad, Telangana 500034' },
             ].map((c, i) => (
               <div key={i} className="con-item">
@@ -163,11 +163,11 @@ Submitted via LaunchMyOTT website
               <h4>🎁 What You'll Get After Submitting:</h4>
               <ul>
                 {[
-                  'Custom platform strategy document',
-                  'Detailed project timeline & milestones',
-                  'Transparent cost breakdown (no hidden fees)',
-                  "Live demo of a similar platform we've built",
-                  'Monetization strategy recommendations',
+                  'Custom white label OTT strategy proposal',
+                  'Detailed development timeline & milestones',
+                  'Full cost breakdown (no monthly royalty fees)',
+                  'Guided walk-through of similar live streaming platforms',
+                  'Tailored video monetization recommendations',
                 ].map((b, i) => (
                   <li key={i}><span className="chk">✓</span>{b}</li>
                 ))}
@@ -188,8 +188,8 @@ Submitted via LaunchMyOTT website
                 </div>
               ) : (
                 <>
-                  <h3>Start Your OTT Journey</h3>
-                  <p className="form-sub">Tell us about your project and we'll craft a custom proposal within 24 hours.</p>
+                  <h3>Start Your OTT Project</h3>
+                  <p className="form-sub">Enter your requirements below to request your free white label proposal.</p>
                   <form onSubmit={onSubmit} className="cform">
 
                     {/* Name row */}
@@ -200,12 +200,12 @@ Submitted via LaunchMyOTT website
 
                     {/* Contact */}
                     <input type="email" name="email" placeholder="Email Address" value={form.email} onChange={onChange} required disabled={isLoading} />
-                    <input type="tel" name="phone" placeholder="Phone Number" value={form.phone} onChange={onChange} disabled={isLoading} />
-                    <input type="text" name="company" placeholder="Company / Project Name" value={form.company} onChange={onChange} disabled={isLoading} />
+                    <input type="tel" name="phone" placeholder="Phone Number (e.g. +1...)" value={form.phone} onChange={onChange} disabled={isLoading} />
+                    <input type="text" name="company" placeholder="Company / Streaming Brand Name" value={form.company} onChange={onChange} disabled={isLoading} />
 
                     {/* ── Plan selection ─────────────────────── */}
                     <div className="form-field-group">
-                      <label className="form-label">Select Plan</label>
+                      <label className="form-label">Select Launch Track</label>
                       <div className="plan-radio-group">
                         {PLANS.map(p => (
                           <label key={p} className={`plan-radio ${form.plan === p ? 'plan-radio-active' : ''}`}>
@@ -223,7 +223,7 @@ Submitted via LaunchMyOTT website
 
                     {/* ── Platform type dropdown ─────────────── */}
                     <select name="platform" value={form.platform} onChange={onChange} required disabled={isLoading}>
-                      <option value="">Select Platform Type</option>
+                      <option value="">Select Streaming Business Model</option>
                       {PLATFORM_TYPES.map(t => <option key={t}>{t}</option>)}
                     </select>
 
@@ -247,7 +247,7 @@ Submitted via LaunchMyOTT website
 
                     {/* ── Preferred launch date ─────────────── */}
                     <div className="form-field-group">
-                      <label className="form-label">Preferred Launch Date</label>
+                      <label className="form-label">Target Launch Date</label>
                       <input
                         type="date" name="launchDate"
                         value={form.launchDate} onChange={onChange}
@@ -260,7 +260,7 @@ Submitted via LaunchMyOTT website
                     {/* ── Message ───────────────────────────── */}
                     <textarea
                       name="message"
-                      placeholder="Tell us about your project, content library, target audience, and goals..."
+                      placeholder="Tell us about your content library size, target streaming audience, and video monetization goals..."
                       value={form.message} onChange={onChange} rows={4} required
                       disabled={isLoading}
                     />
@@ -273,9 +273,9 @@ Submitted via LaunchMyOTT website
                       {isLoading ? (
                         <span className="btn-spinner-wrap">
                           <span className="btn-spinner" />
-                          Sending…
+                          Generating Proposal…
                         </span>
-                      ) : 'Send My Free Proposal →'}
+                      ) : 'Request Free Proposal & Demo →'}
                     </Mag>
                   </form>
                 </>

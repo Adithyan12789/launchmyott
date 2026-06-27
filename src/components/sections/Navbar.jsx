@@ -19,7 +19,7 @@ const Navbar = () => {
         </a>
         <div className={`nav-links ${open ? 'nl-open' : ''}`}>
           {links.map(l => <a key={l} href={`#${l.toLowerCase()}`} className="nl" onClick={() => so(false)}>{l}</a>)}
-          <Mag href="#contact" className="nav-cta" onClick={() => so(false)}>Get Demo</Mag>
+          <Mag href="#contact" className="nav-cta" onClick={() => so(false)}>Book a Demo</Mag>
         </div>
         <button className={`burger ${open ? 'bopen' : ''}`} onClick={() => so(!open)}>
           <span /><span /><span />

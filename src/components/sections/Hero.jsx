@@ -31,13 +31,13 @@ const Hero = () => (
       <div className="hero-left">
         <SR>
           <div className="hero-tag">
-            <span className="htag-dot" />White-Label OTT Platform Development
+            <span className="htag-dot" />White-Label OTT Platform Development & Hosting
           </div>
         </SR>
         <SR delay={80}>
           <h1 className="hero-h1">
             <Shuffle
-              text="Launch Your Own"
+              text="Build & Launch Your"
               tag="span"
               shuffleDirection="right"
               duration={0.4}
@@ -52,7 +52,7 @@ const Hero = () => (
               loop={false}
               style={{ display: 'block', textAlign: 'left', fontFamily: 'inherit', fontSize: 'inherit', fontWeight: 'inherit', lineHeight: 'inherit', color: 'inherit', letterSpacing: 'inherit' }}
             />
-            <Cycle words={['OTT Platform', 'Streaming Empire', 'Content Hub', 'Media Brand']} /><br />
+            <Cycle words={['White Label OTT Platform', 'Custom Netflix Clone', 'Video Streaming Platform', 'Subscription Video Platform']} /><br />
             <Shuffle
               text="in Minutes, Not Years"
               tag="span"
@@ -73,28 +73,26 @@ const Hero = () => (
         </SR>
         <SR delay={160}>
           <p className="hero-p">
-            End-to-end streaming platform development for filmmakers, broadcasters, content creators,
-            and media companies. From concept to global launch — we build the technology so you can
-            focus on what matters: your content.
+            Get enterprise-grade white-label OTT platform development. Launch your subscription video platform with a powerful OTT CMS, secure video hosting, and multi-device OTT app development—all under your own brand.
           </p>
         </SR>
         <SR delay={240}>
           <div className="hero-actions">
             <Mag href="#contact" className="btn-pri">
-              🎬 Get Free Demo
+              🎬 Request a Free Proposal
             </Mag>
             <Mag href="#features" className="btn-sec">
-              Explore Features →
+              See OTT Software Features →
             </Mag>
           </div>
         </SR>
         <SR delay={320}>
           <div className="hero-stats">
             {[
-              { v: '50+', l: 'Platforms Launched' },
-              { v: '45M+', l: 'End Users Served' },
-              { v: '99.9%', l: 'Uptime Guarantee' },
-              { v: '12+', l: 'Countries Reached' },
+              { v: '150+', l: 'OTT Platforms Launched' },
+              { v: '45M+', l: 'End Users Streaming Daily' },
+              { v: '99.99%', l: 'Uptime SLA Guarantee' },
+              { v: '32+', l: 'Countries Reached' },
             ].map(s => (
               <div key={s.l} className="hstat">
                 <div className="hstat-n"><Counter target={s.v} /></div>
@@ -109,11 +107,11 @@ const Hero = () => (
         <div className="mockup">
           <div className="mck-bar">
             <div className="mck-dots"><span /><span /><span /></div>
-            <div className="mck-url">launchmyott.com — Dashboard</div>
+            <div className="mck-url">launchmyott.com — OTT CMS Dashboard</div>
           </div>
           <div className="mck-body">
             <div className="mck-side">
-              {['📊 Overview', '📺 Content', '👥 Users', '💰 Revenue', '📈 Analytics'].map((t, i) => (
+              {['📊 Dashboard', '📺 OTT CMS', '👥 Subscribers', '💰 Video Monetization', '📈 Analytics'].map((t, i) => (
                 <div key={i} className={`msi ${i === 0 ? 'msi-a' : ''}`}>{t}</div>
               ))}
             </div>
@@ -124,9 +122,9 @@ const Hero = () => (
                 ))}
               </div>
               <div className="mck-metrics">
-                <div className="mmet"><div className="mv">24.8K</div><div className="mk">Active Users</div></div>
-                <div className="mmet"><div className="mv">$48.2K</div><div className="mk">MRR</div></div>
-                <div className="mmet"><div className="mv">96.3%</div><div className="mk">Retention</div></div>
+                <div className="mmet"><div className="mv">24.8K</div><div className="mk">Streamers Online</div></div>
+                <div className="mmet"><div className="mv">$48.2K</div><div className="mk">Monthly Revenue</div></div>
+                <div className="mmet"><div className="mv">96.3%</div><div className="mk">Viewer Retention</div></div>
               </div>
             </div>
           </div>

@@ -8,7 +8,7 @@ const Footer = () => (
           <a href="#hero" className="brand foot-brand-logo">
             <img src={logoImg} alt="LaunchMyOTT" className="brand-logo foot-logo-img" />
           </a>
-          <p>End-to-end OTT platform development for content creators, broadcasters, and media companies worldwide. Building streaming empires since 2016.</p>
+          <p>Enterprise-grade white label OTT platform development and video hosting solutions for media companies, broadcasters, and studios globally. Launch your streaming service with our proven OTT software.</p>
           <div className="foot-socials">
             <a href="#" className="fsoc">𝕏</a>
             <a href="#" className="fsoc">in</a>

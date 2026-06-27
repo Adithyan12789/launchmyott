@@ -7,14 +7,14 @@ import Badge from '../shared/Badge'
 
 const Services = () => {
   const svcs = [
-    { icon: '📱', t: 'OTT App Development', d: 'Native apps for iOS, Android, Smart TVs, Roku, Fire TV, Apple TV, and responsive web. Pixel-perfect UI with buttery-smooth playback on every device.' },
-    { icon: '🎛️', t: 'CMS & Content Management', d: 'Intuitive drag-and-drop content management. Upload, organize, schedule, and publish across all platforms from one powerful dashboard. No technical skills needed.' },
-    { icon: '☁️', t: 'Video Hosting & CDN', d: 'Enterprise-grade hosting with adaptive bitrate streaming (HLS/DASH), global CDN across 200+ edge locations, and 4K Ultra HD support with zero buffering.' },
-    { icon: '💰', t: 'Monetization Engine', d: 'SVOD, AVOD, TVOD, and hybrid models. Flexible pricing tiers, free trials, coupon codes, and bundle offers built-in from day one.' },
-    { icon: '💳', t: 'Payment Integration', d: 'Stripe, PayPal, Razorpay, and 50+ global gateways. 135+ currencies, recurring billing, in-app purchases, and automated dunning management.' },
-    { icon: '📊', t: 'Advanced Analytics', d: 'Real-time viewer analytics, engagement heatmaps, churn prediction, revenue dashboards, and audience segmentation — all in one unified suite.' },
-    { icon: '🔐', t: 'DRM & Security', d: 'Multi-DRM (Widevine, FairPlay, PlayReady), AES-128 encryption, forensic watermarking, geo-fencing, IP restrictions, and anti-screen-capture.' },
-    { icon: '🔴', t: 'Live Streaming', d: 'Ultra-low latency streaming with DVR, real-time chat, live polls, multi-camera support, instant replay, and simulcasting to social platforms.' },
+    { icon: '📱', t: 'OTT App Development', d: 'Native white-label apps for iOS, Android, Apple TV, Roku, Fire TV, and Samsung Smart TVs. Fully customized UI designed to keep your audience streaming on any screen.' },
+    { icon: '🎛️', t: 'Advanced OTT CMS', d: 'Streamline video management with a robust admin panel. Upload, organize metadata, schedule live programs, and manage video categories across all devices instantly.' },
+    { icon: '☁️', t: 'Video Hosting & CDN', d: 'Enterprise-grade video hosting featuring adaptive bitrate playback (HLS/DASH), global secure CDNs, and 4K Ultra HD delivery with zero buffering or delay.' },
+    { icon: '💰', t: 'Flexible Video Monetization', d: 'Maximize revenue with built-in support for Subscription VOD (SVOD), transactional VOD (TVOD/PPV), ad-supported streaming (AVOD), and hybrid subscription models.' },
+    { icon: '💳', t: 'Global Billing & Payments', d: 'Integrate payment systems like Stripe, PayPal, and local gateways. Offer recurring pricing tiers, free trials, coupons, and seamless mobile in-app purchases.' },
+    { icon: '📊', t: 'Real-Time Viewer Analytics', d: 'Track viewer engagement heatmaps, geographical traffic, churn analytics, subscriber growth, and advertising performance inside a single unified dashboard.' },
+    { icon: '🔐', t: 'Multi-DRM Security', d: 'Studio-grade content protection utilizing Google Widevine, Apple FairPlay, and Microsoft PlayReady DRM, plus IP geo-blocking and screen-recording prevention.' },
+    { icon: '🔴', t: 'Live Streaming Platform', d: 'Ultra-low latency live streaming equipped with interactive live chat, DVR playback, instant replay, real-time polling, and simultaneous social broadcasting.' },
   ]
   return (
     <section id="services" className="section sec-gray">
@@ -34,9 +34,9 @@ const Services = () => {
       </div>
       <div className="container">
         <SR className="sh">
-          <Badge text="Our Services" />
-          <h2 className="st">Everything You Need to<br />Dominate Streaming</h2>
-          <ScrollReveal baseOpacity={0.1} enableBlur blurStrength={4} baseRotation={2} textClassName="ss sr-text">From the first line of code to your millionth subscriber — the complete technology stack that powers world-class OTT platforms.</ScrollReveal>
+          <Badge text="Core Services" />
+          <h2 className="st">Complete White Label OTT<br />Software Solution</h2>
+          <ScrollReveal baseOpacity={0.1} enableBlur blurStrength={4} baseRotation={2} textClassName="ss sr-text">From custom OTT app development to secure global streaming infrastructure, get the tools you need to build and scale your streaming business.</ScrollReveal>
         </SR>
         <div className="svc-grid">
           {svcs.map((s, i) => (

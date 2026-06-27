@@ -6,20 +6,20 @@ import Badge from '../shared/Badge'
 
 const Solutions = () => {
   const sols = [
-    { e: '🎬', t: 'Film Studios & Production Houses', d: 'Launch your streaming home for your film library. Direct-to-consumer eliminates middlemen and maximizes revenue per title.', f: ['Premiere scheduling & countdown', 'Theatrical-to-digital windows', 'Revenue sharing dashboards', 'Festival circuit integration', 'Behind-the-scenes extras'] },
-    { e: '📺', t: 'Regional Channels & Broadcasters', d: 'Extend your broadcast reach digitally. Simulcast live TV, build a VOD archive, and capture cord-cutters who still love your content.', f: ['Linear channel streaming', 'Catch-up TV / time-shift', 'EPG (Electronic Program Guide)', 'Regional language interfaces', 'Ad insertion (SSAI/CSAI)'] },
-    { e: '🌟', t: 'Influencers & Creators', d: 'Own your audience, own your revenue. Stop depending on algorithm changes. Build your subscriber-based content empire.', f: ['Community features & chat', 'Tiered membership levels', 'Direct fan monetization', 'Merch store integration', 'Exclusive content vaults'] },
-    { e: '🎓', t: 'Educational Platforms', d: 'Transform your courses into a premium learning experience. Certificates, progress tracking, quizzes, and cohort-based learning on your branded platform.', f: ['Course progress tracking', 'Quiz & assessment engine', 'Certificate generation', 'Instructor dashboards', 'Student analytics & reporting'] },
-    { e: '🙏', t: 'Faith & Devotional Content', d: 'Reach your congregation globally with live worship streaming, sermon archives, devotional libraries, and community engagement tools.', f: ['Live worship streaming', 'Sermon archive & search', 'Donation integration', 'Prayer request features', 'Multi-campus support'] },
+    { e: '🎬', t: 'Film Studios & Video on Demand', d: 'Launch a dedicated video on demand platform for your movie library. Bypass theater middlemen and maximize direct-to-consumer video monetization.', f: ['Premiere Scheduling & Countdowns', 'Theatrical-to-Digital Release Windows', 'Revenue Sharing & Royalty Panels', 'Film Festival Integration', 'Behind-the-Scenes & Bonus Content'] },
+    { e: '📺', t: 'Broadcasters & Live TV Networks', d: 'Extend your reach with linear channels and live streaming platform capabilities. Capture digital cord-cutters with full VOD archives.', f: ['24/7 Linear Channel Streaming', 'Catch-Up TV & Time-Shifting', 'EPG (Electronic Program Guide)', 'Localized Multi-Language UI', 'Dynamic Server-Side Ad Insertion (SSAI)'] },
+    { e: '🌟', t: 'Content Creators & Video Subscription', d: 'Own your audience and escape algorithm volatility. Build a subscription video platform and scale your streaming business.', f: ['Live Chat & Community Hubs', 'Tiered Subscriptions & Memberships', 'Direct Fan-to-Creator Monetization', 'Branded Merch Integrations', 'Exclusive Early-Access Vaults'] },
+    { e: '🎓', t: 'E-Learning & Video Courses', d: 'Transform video content into a premium school academy with progress trackers, quizzes, and certification awards.', f: ['Video Course Progress Trackers', 'Interactive Quiz & Exam Engine', 'Automated Certificate Generator', 'Instructor Grade Dashboards', 'Student Analytics & Insights'] },
+    { e: '🙏', t: 'Faith-Based & Devotional Streaming', d: 'Stream sermons, host live prayer events, and grow your congregation globally on a secure, ad-free video hosting platform.', f: ['Live Sermon & Event Streaming', 'Searchable Sermon & Devotional Archives', 'Integrated Online Tithing & Donations', 'Interactive Digital Prayer Requests', 'Multi-Campus & Regional Networks'] },
   ]
   return (
     <section id="solutions" className="section sec-gray">
       <GridPattern />
       <div className="container">
         <SR className="sh">
-          <Badge text="Industry Solutions" />
-          <h2 className="st">Custom-Built for<br />Your Industry</h2>
-          <ScrollReveal baseOpacity={0.1} enableBlur blurStrength={4} baseRotation={2} textClassName="ss sr-text">We don't believe in one-size-fits-all. Every industry has unique workflows, audience behaviors, and monetization requirements. We've mastered them all.</ScrollReveal>
+          <Badge text="Tailored Solutions" />
+          <h2 className="st">OTT Solutions Custom-Built<br />for Your Industry</h2>
+          <ScrollReveal baseOpacity={0.1} enableBlur blurStrength={4} baseRotation={2} textClassName="ss sr-text">Whether launching a Netflix clone for films, linear live streams for TV networks, or course videos, get tailored features for your streaming niche.</ScrollReveal>
         </SR>
         <div className="sol-grid">
           {sols.map((s, i) => (

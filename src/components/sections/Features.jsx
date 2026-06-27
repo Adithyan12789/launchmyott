@@ -8,11 +8,11 @@ import ScrollStack, { ScrollStackItem } from '../shared/ScrollStack'
 
 const Features = () => {
   const feats = [
-    { n: '01', t: '🌍 Multi-Language & Multi-Currency', d: 'Reach global audiences with 40+ languages, RTL layouts, localized metadata, subtitles, and region-specific pricing in 135+ currencies. One platform, every market.' },
-    { n: '02', t: '☁️ Scalable Cloud Infrastructure', d: 'Auto-scaling on AWS/GCP handles traffic spikes seamlessly. From 10 to 10 million concurrent viewers — your platform never stutters, never crashes. 99.99% uptime SLA.' },
-    { n: '03', t: '🤖 AI-Powered Recommendations', d: 'ML algorithms analyze viewing patterns and preferences to serve hyper-personalized content — increasing watch time by 35% and reducing churn by 28% on average.' },
-    { n: '04', t: '🎛️ Powerful CMS Dashboard', d: 'Drag-and-drop content organization, automated transcoding, scheduled publishing, series management, metadata editing, thumbnail generation, and bulk upload.' },
-    { n: '05', t: '👥 Complete Subscriber Management', d: 'Registration flows, viewing history, multi-profile support, parental controls, and automated engagement campaigns — all from one beautiful interface.' },
+    { n: '01', t: '🌍 Global Localization & Currencies', d: 'Expand your subscription video platform worldwide with 40+ languages, RTL layouts, localized subtitles, and localized billing in 135+ currencies.' },
+    { n: '02', t: '☁️ Scalable Video Hosting Infrastructure', d: 'Auto-scaling cloud infrastructure on AWS and GCP handles peak user spikes seamlessly. Deliver high-bitrate streaming with a guaranteed 99.99% uptime SLA.' },
+    { n: '03', t: '🤖 AI Recommendation OTT Software', d: 'Machine learning algorithms analyze viewing history to recommend personalized content, boosting platform engagement by 35% and reducing churn by 28%.' },
+    { n: '04', t: '🎛️ Enterprise OTT CMS Panel', d: 'Manage content with drag-and-drop playlists, automated cloud transcoding, scheduled release windows, bulk imports, and dynamic thumbnail creators.' },
+    { n: '05', t: '👥 End-to-End Subscriber CRO Management', d: 'Seamless user registration, viewing progress tracking, profile creation, content recommendations, and automated email campaigns to maximize conversions.' },
   ]
   return (
     <section id="features" className="section">
@@ -27,9 +27,9 @@ const Features = () => {
       </div>
       <div className="container">
         <SR className="sh">
-          <Badge text="Platform Features" />
-          <h2 className="st">Built for Scale.<br />Designed for Delight.</h2>
-          <ScrollReveal baseOpacity={0.1} enableBlur blurStrength={4} baseRotation={2} textClassName="ss sr-text">Every feature has been battle-tested across 150+ platform launches. This isn't a prototype — it's proven technology powering millions of streaming hours daily.</ScrollReveal>
+          <Badge text="OTT Platform Features" />
+          <h2 className="st">Built for Scaling.<br />Engineered for CRO.</h2>
+          <ScrollReveal baseOpacity={0.1} enableBlur blurStrength={4} baseRotation={2} textClassName="ss sr-text">Every tool has been refined across 150+ white label OTT platform launches. Scale your video streaming platform with robust tech.</ScrollReveal>
         </SR>
         <div className="feat-layout">
           <div className="feat-visual">
