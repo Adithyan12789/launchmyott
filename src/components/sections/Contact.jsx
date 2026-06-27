@@ -148,7 +148,7 @@ Submitted via LaunchMyOTT website
               { icon: '📧', t: 'Email Us', i: 'Hello@launchmyott.com', s: 'We respond within 4 hours during business days' },
               { icon: '📞', t: 'Call Us', i: '+91 9447220618', s: 'Mon–Fri, 9am–6pm IST' },
               { icon: '💬', t: 'Live Chat', i: 'Available on our website', s: '' },
-              { icon: '🌍', t: 'Global Office', i: 'H No. 8, Gokul Kimtee Towers', s: '2-686/K/6, Road No. 12, NBT Nagar, Banjara Hills, Hyderabad, Telangana 500028' },
+              { icon: '🌍', t: 'Global Office', i: '2nd & 3rd Floor, H No. 8-2-686/K/6, Gokul Kimtee Towers', s: 'Banjara Hills Road No. 12, Hyderabad, Telangana 500034' },
             ].map((c, i) => (
               <div key={i} className="con-item">
                 <div className="con-icon">{c.icon}</div>

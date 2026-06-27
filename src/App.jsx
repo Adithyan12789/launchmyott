@@ -11,9 +11,7 @@ import Features from './components/sections/Features'
 import Solutions from './components/sections/Solutions'
 import Process from './components/sections/Process'
 import Credibility from './components/sections/Credibility'
-import Guarantee from './components/sections/Guarantee'
 import FAQ from './components/sections/FAQ'
-import Urgency from './components/sections/Urgency'
 import FinalCTA from './components/sections/FinalCTA'
 import Contact from './components/sections/Contact'
 import Footer from './components/sections/Footer'
@@ -43,9 +41,7 @@ export default function App() {
       <Solutions />
       <Process />
       <Credibility />
-      <Guarantee />
       <FAQ />
-      <Urgency />
       <FinalCTA />
       <Contact />
       <Footer />
